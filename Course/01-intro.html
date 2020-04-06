@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Responsive Typography</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<!-- 
+
+		http://hwdesignco.com/blog
+	
+		What we can't know
+		==================
+		- screen size
+		- device capabilities
+		- concurrent activities
+		- depth of focus
+		- purpose of visit
+
+		// Type / typography can tell us which site we are on, and can convey meaning and importance.
+
+		4 simple steps
+		1) performance: select fonts with care, load what you need & don't block the page draw.
+			// good type face consistancy
+			// not getting in the way of users
+			// doing it in a way that does not block the rendering of the page
+
+		2) Progressive: plan for failure, tune up the loading process & fallback fonts to minimize 'FOUT'
+			// 
+
+		3) Proportions: small screens demand subtile scale
+			//
+
+		4) Polish: Design is the detials: OpenType & then some
+
+
+		Performance
+		===========
+		// Great typography isn't 'I used all of them'
+		// Each font has a preformance cost, so budget wisely
+		// FOUT - flash of unseen text during loading (is our fault)
+
+		// Google webfont
+		// you can use these classes .wf-inactive / .wf-active
+		// first use .wf-inactive and give it the styles such as font-size, line-height and letter-spacing to prevent jumping.
+
+
+		Progressive enhancement
+		======================= 
+		// check out google web fonts WebFontConfig()
+		// use the JS tab:
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: { families: [ 'Pacifico::latin' ] }
+			};
+			(function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true'; // IMPORTANT this ensures that the font is not blocking the load
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			})(); 
+		</script>
+
+
+		Proportion: one size won't do
+		=============================
+		- small canvas requires subtile proportions, with large screen the there are more elements to distract the user so it make sencse to have large heading, this is not so for small screens.
+
+		- preserve meaning, intent and reading experience cross platform
+
+		// TIP: adding max-width on elements to keep text readable - keep line lengths consistant 70-80 chars per line
+
+
+		Polish
+		======
+		open type - allows ligitures and other goodies 
+		1/2 becomes a fractions
+		handeling orphans using &nbsp; could be done with widows too.
+
+		Typecast - for prototyping - http://typecast.com/
+		http://www.grumpicon.com/  - SVG and type font fallback
+
+	-->
+
+
+</body>
+</html>

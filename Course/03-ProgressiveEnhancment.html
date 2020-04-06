@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Responsive Typography</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- 
+		Performance & Progressive Enchanement
+		=====================================
+
+		- dont block the page render
+		- 75% of mobile users will leave in 5 secs
+
+		.wf-inactive body {}
+
+		- support for @font-face in more likely than JS 
+		- still inclune <noscript> as a fallback
+
+		// See proformance and progression files in exercise files folder
+
+		// When using google fonts Don't use @import this causes a lot of problems
+	-->
+
+		<script type="text/javascript">
+		  WebFontConfig = {
+		    google: { families: [ 'Merriweather:400,900italic,700italic,900,700:all' ] }, // Here the all allows all subsets which give you opentype features such as ligitures
+			custom: {
+			    families: ['Fira Sans'],
+			    urls: ['../assets/css/type.css']
+			}
+		  };
+		  (function() {
+		    var wf = document.createElement('script');
+		    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		    wf.type = 'text/javascript';
+		    wf.async = 'true';
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(wf, s);
+		  })(); 
+		</script>
+		
+		<noscript>
+			<link href='http://fonts.googleapis.com/css?family=Merriweather:400,900italic,700italic,900,700&subset=all' rel='stylesheet' type='text/css'> <!--  Here the all allows all subsets which give you opentype features such as ligitures-->
+		</noscript>
+
+
+		<!-- 
+			Important takeaways
+			===================
+			// ensure that the script and no-scripts verions are available
+			// bellow when merging font classes include this code
+
+			custom: {
+			    families: ['Fira Sans'],
+			    urls: ['../assets/css/type.css']
+			}
+
+			// google web font loader documenation
+			https://github.com/typekit/webfontloader
+
+			// Compare kit on workshop folder
+		-->
+
+</body>
+</html>
